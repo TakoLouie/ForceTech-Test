@@ -1,0 +1,16 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #102a43; background: #edf6ff; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; background: radial-gradient(circle at top left, #cce8ff, transparent 42%), #f7fbff; }
+.card { width: min(680px, 100%); padding: clamp(28px, 6vw, 52px); background: #fff; border-radius: 20px; box-shadow: 0 20px 60px #3673a42b; }
+.eyebrow { margin: 0 0 12px; color: #087f8c; font-size: .75rem; font-weight: 800; letter-spacing: .13em; }
+h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -.05em; line-height: 1; }
+.intro { margin: 18px 0 32px; color: #52616b; line-height: 1.55; }
+label, .result span { display: block; margin-bottom: 8px; font-weight: 700; font-size: .9rem; }
+.input-row, .result-row { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; padding: 15px 16px; border: 1px solid #b6c7d6; border-radius: 10px; font: inherit; }
+input:focus { outline: 3px solid #63d7e333; border-color: #087f8c; }
+button { border: 0; border-radius: 10px; padding: 0 20px; background: #087f8c; color: white; font: inherit; font-weight: 750; cursor: pointer; }
+button:hover { background: #066a75; } button:disabled { opacity: .6; cursor: wait; }
+.message { min-height: 1.5em; margin: 14px 0 0; color: #087f8c; font-weight: 600; }.message.error { color: #c92a2a; }
+.result { margin-top: 22px; padding: 18px; border-radius: 12px; background: #e7f9fa; }.result-row { align-items: center; }.result a { min-width: 0; flex: 1; overflow-wrap: anywhere; color: #056b75; font-weight: 700; }.result button { padding: 10px 14px; }
+@media (max-width: 520px) { .input-row { flex-direction: column; } .input-row button { min-height: 48px; } }
