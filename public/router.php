@@ -1,5 +1,4 @@
 <?php
-// Router for `php -S`; Apache production requests use .htaccess instead.
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $file = __DIR__ . $path;
 if ($path !== '/' && is_file($file)) {

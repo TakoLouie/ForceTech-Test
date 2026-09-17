@@ -32,7 +32,6 @@ function createShortCode(string $url): string
         'INSERT INTO urls (short_code, original_url) VALUES (:code, :url)'
     );
 
-    // The unique index makes collisions harmless, even under concurrent requests.
     for ($attempt = 0; $attempt < 10; $attempt++) {
         $code = generateCode();
         try {

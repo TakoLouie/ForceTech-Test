@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 
-/** Load simple KEY=VALUE settings from .env without requiring a dependency. */
 function env(string $key, ?string $default = null): ?string
 {
     static $settings = null;
